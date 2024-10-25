@@ -1,14 +1,12 @@
+const axios = require("axios");
+const name = "about" ;
+
 module.exports = {
-  description: "What is WieAI?",
-  async run({ api, send, admin }){
-    setTimeout(async () => await send({
-      attachment: {
-        type: "template",
-        payload: {
-          text: `🤖 About Me:
-Nigga STfu you dont need to know about me`,
-        }
-      }
-    }), 2*1000);
+  name,
+  description: "test",
+  async run ({ api, event, send, args }){
+
+    send("Hi");
+    
   }
 }
